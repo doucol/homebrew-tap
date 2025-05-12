@@ -1,4 +1,4 @@
-# Doucol Clyde
+# Clyde
 
 ## How do I install these formulae?
 
