@@ -11,7 +11,7 @@ class Clyde < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/doucol/clyde/releases/download/v0.2.7/clyde_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "8e9c7bd39a55c7ee57df1529fdb039ccc7c20a4031a37dd1360f252fdff8c0e8"
+      sha256 "e2bdf2eab934ddf92d7c4794f4b73c6a818341ba404269481764aef9e2cff54a"
 
       def install
         bin.install "clyde"
@@ -19,7 +19,7 @@ class Clyde < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/doucol/clyde/releases/download/v0.2.7/clyde_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "61377671db199753ae58046141d5b03e3f80b9674f65b2bc62542496e8dac14d"
+      sha256 "092d2b57d8934634eb25ed8bf785787d4677cd4e07f809075902b9b47e8274c1"
 
       def install
         bin.install "clyde"
@@ -30,14 +30,14 @@ class Clyde < Formula
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
       url "https://github.com/doucol/clyde/releases/download/v0.2.7/clyde_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "07f6c4c1c75432ca81c82f4271cf8dfcd8f9dfdec1ffe2364de01fd6ca594eb5"
+      sha256 "76f18d9ed205207c24631a9fd0e0287cf2cf71f4ca4bdecf0d161bdf343def51"
       def install
         bin.install "clyde"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
       url "https://github.com/doucol/clyde/releases/download/v0.2.7/clyde_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "ce6aa7f0f92e38c2829281bab680e7458d6486b79bd05fc076d8d5bfb7d48c26"
+      sha256 "a985cce1bd8e850641081dc13cd6f837b572ed5e5cc8f153ba9cedb67ec41ae9"
       def install
         bin.install "clyde"
       end
@@ -45,6 +45,6 @@ class Clyde < Formula
   end
 
   test do
-    assert_match "clyde", shell_output("#{bin}/clyde help")
+    assert_match "v0.2.7", shell_output("#{bin}/clyde version")
   end
 end
