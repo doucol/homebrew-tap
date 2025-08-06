@@ -5,21 +5,21 @@
 class Clyde < Formula
   desc "Terminal-based UI for monitoring Project Calico network flows in real-time"
   homepage "https://github.com/doucol/clyde/"
-  version "0.4.3"
+  version "0.4.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/doucol/clyde/releases/download/v0.4.3/clyde_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "384b83172ed2c9e03dd7ccb4c7803db84ac11d1f187b087d78e46cd057939db4"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.4/clyde_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "42c5e7470a87b001e5c36b2509fcb0b2629100bbe1a15fca0b6b45cd27fa0a82"
 
       def install
         bin.install "clyde"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/doucol/clyde/releases/download/v0.4.3/clyde_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "44059346c857af5f0d6a29bfecd53dfb9167a76169ff38c3158feed45497c70a"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.4/clyde_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "5dceae6cb7dd8d86700363aba237f4780a2da501a3adb70dc47c85bb747ba176"
 
       def install
         bin.install "clyde"
@@ -29,15 +29,15 @@ class Clyde < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/doucol/clyde/releases/download/v0.4.3/clyde_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "d85c2f4647d5df3515e0d1bdeed3942e5ca42525d643a51a64f4b3cf780238cc"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.4/clyde_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "39794a1a08f35bb7249e7db2ec723a98c5ce657cc1b43cc6d0c264680071b671"
       def install
         bin.install "clyde"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/doucol/clyde/releases/download/v0.4.3/clyde_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "851a5cae8a346545379cef36e04f5fdb6c72263f6ae5a0331835fb775237cc48"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.4/clyde_Linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "600d369ff69aadd566d28633b983f36a8503aa774370e61f7f9debf2b80eb82a"
       def install
         bin.install "clyde"
       end
@@ -45,6 +45,6 @@ class Clyde < Formula
   end
 
   test do
-    assert_match "v0.4.3", shell_output("#{bin}/clyde version")
+    assert_match "v0.4.4", shell_output("#{bin}/clyde version")
   end
 end
