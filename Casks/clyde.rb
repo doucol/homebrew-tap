@@ -2,7 +2,7 @@
 cask "clyde" do
   desc "Terminal-based UI for monitoring Project Calico network flows in real-time"
   homepage "https://github.com/doucol/clyde/"
-  version "0.4.5"
+  version "0.4.6"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,29 +12,29 @@ cask "clyde" do
 
   on_macos do
     on_intel do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.5/clyde_Darwin_x86_64.tar.gz",
-        using: :homebrew_curl
-      sha256 "20bc4746a07acc34faae938d781a7b31cc14b80c8fbc82da71d392c806078357"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.6/clyde_Darwin_x86_64.tar.gz"
+      sha256 "2109e81c3e502b7b1925dfc6b555e1d89399cd3bf19d804dd3f353aa9b13588f"
     end
     on_arm do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.5/clyde_Darwin_arm64.tar.gz",
-        using: :homebrew_curl
-      sha256 "da90d002fa5eefb2390e996482351a3d1765cb3e75054ae5a38ad9d96601db23"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.6/clyde_Darwin_arm64.tar.gz"
+      sha256 "cdcd97168c4ecc352324f0971c42d9edaed46fcae32397be4e0ba365d293f28e"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.5/clyde_Linux_x86_64.tar.gz",
-        using: :homebrew_curl
-      sha256 "4025003dcaa71f798c40eb7058368eef5701b547a2b26b57d1417d62666af271"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.6/clyde_Linux_x86_64.tar.gz"
+      sha256 "296ea33cbd18cac84d87792a0c80419a74690698ed3ab6d98bdd2922878791dd"
     end
     on_arm do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.5/clyde_Linux_arm64.tar.gz",
-        using: :homebrew_curl
-      sha256 "6739fd8641c94c32d75c43b59fae8024706b636627147806ec28fa572a5e86aa"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.6/clyde_Linux_arm64.tar.gz"
+      sha256 "acdd9d1e129a5e9e378cf95ddd70a6d346e6d76a2dc8709c7f41f963dda5b878"
     end
   end
+
+  conflicts_with formula: [
+      "clyde",
+    ]
 
   postflight do
     if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
