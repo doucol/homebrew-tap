@@ -2,7 +2,7 @@
 cask "clyde" do
   desc "Terminal-based UI for monitoring Project Calico network flows in real-time"
   homepage "https://github.com/doucol/clyde/"
-  version "0.4.7"
+  version "0.4.8"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "clyde" do
 
   on_macos do
     on_intel do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.7/clyde_Darwin_x86_64.tar.gz"
-      sha256 "5cd5f4b13212a7f5bdf00c21c82129122b35f6d75b1df4cc736a79081e0eade2"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.8/clyde_Darwin_x86_64.tar.gz"
+      sha256 "7234d41c5a3e07f6ac8d8426155b9a0416896d297159c929d9449b2f3bb4f9f8"
     end
     on_arm do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.7/clyde_Darwin_arm64.tar.gz"
-      sha256 "d9d8fce22165e90b1d492e25823f28f573741dd029e52d98c6166c786149e2ee"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.8/clyde_Darwin_arm64.tar.gz"
+      sha256 "ff554f200ae0ac785fd2d6231c8ba81330b0fc5e929022181dd34dc2dee65089"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.7/clyde_Linux_x86_64.tar.gz"
-      sha256 "e29529e1caf7bb5c4ed5fd4e18df6b643df0e9f7bcb6bf3fdaab6d8046874dcb"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.8/clyde_Linux_x86_64.tar.gz"
+      sha256 "bf8bba3c4b4e64f4a1a7c7a11e822303858757cf1970b52726ae7e392a106524"
     end
     on_arm do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.7/clyde_Linux_arm64.tar.gz"
-      sha256 "58687df86389d70a6a89f758903c545240017da40db3e675fa2d0086cd4fb3d3"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.8/clyde_Linux_arm64.tar.gz"
+      sha256 "519ffec5dd69b08ee627c6ff6f8650527216331dbf1107131fa5d0eb53cc9e40"
     end
   end
 
