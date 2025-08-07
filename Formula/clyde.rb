@@ -4,7 +4,7 @@
 class Clyde < Formula
   desc "Terminal-based UI for monitoring Project Calico network flows in real-time"
   homepage "https://github.com/doucol/clyde/"
-  version "0.4.4"
+  version "0.4.13"
   license "Apache-2.0"
 
   on_macos do
@@ -28,8 +28,8 @@ class Clyde < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/doucol/clyde/releases/download/v0.4.4/clyde_0.4.4_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "39794a1a08f35bb7249e7db2ec723a98c5ce657cc1b43cc6d0c264680071b671"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.13/clyde_0.4.13_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "69897f881af8e33ae66c951e2387055ddf6ff23cf75e750c78d2541c0cf9d342"
       def install
         bin.install "clyde"
       end
