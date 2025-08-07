@@ -9,7 +9,7 @@ class Clyde < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/doucol/clyde/releases/download/v0.4.4/clyde_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      url "https://github.com/doucol/clyde/releases/download/v0.4.4/clyde_darwin_amd64.tar.gz", using: CurlDownloadStrategy
       sha256 "42c5e7470a87b001e5c36b2509fcb0b2629100bbe1a15fca0b6b45cd27fa0a82"
 
       def install
@@ -28,7 +28,7 @@ class Clyde < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/doucol/clyde/releases/download/v0.4.4/clyde_linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      url "https://github.com/doucol/clyde/releases/download/v0.4.4/clyde_linux_amd64.tar.gz", using: CurlDownloadStrategy
       sha256 "39794a1a08f35bb7249e7db2ec723a98c5ce657cc1b43cc6d0c264680071b671"
       def install
         bin.install "clyde"
