@@ -2,7 +2,7 @@
 cask "clyde" do
   desc "Terminal-based UI for monitoring Project Calico network flows in real-time"
   homepage "https://github.com/doucol/clyde/"
-  version "0.4.6"
+  version "0.4.7"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "clyde" do
 
   on_macos do
     on_intel do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.6/clyde_Darwin_x86_64.tar.gz"
-      sha256 "2109e81c3e502b7b1925dfc6b555e1d89399cd3bf19d804dd3f353aa9b13588f"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.7/clyde_Darwin_x86_64.tar.gz"
+      sha256 "5cd5f4b13212a7f5bdf00c21c82129122b35f6d75b1df4cc736a79081e0eade2"
     end
     on_arm do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.6/clyde_Darwin_arm64.tar.gz"
-      sha256 "cdcd97168c4ecc352324f0971c42d9edaed46fcae32397be4e0ba365d293f28e"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.7/clyde_Darwin_arm64.tar.gz"
+      sha256 "d9d8fce22165e90b1d492e25823f28f573741dd029e52d98c6166c786149e2ee"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.6/clyde_Linux_x86_64.tar.gz"
-      sha256 "296ea33cbd18cac84d87792a0c80419a74690698ed3ab6d98bdd2922878791dd"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.7/clyde_Linux_x86_64.tar.gz"
+      sha256 "e29529e1caf7bb5c4ed5fd4e18df6b643df0e9f7bcb6bf3fdaab6d8046874dcb"
     end
     on_arm do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.6/clyde_Linux_arm64.tar.gz"
-      sha256 "acdd9d1e129a5e9e378cf95ddd70a6d346e6d76a2dc8709c7f41f963dda5b878"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.7/clyde_Linux_arm64.tar.gz"
+      sha256 "58687df86389d70a6a89f758903c545240017da40db3e675fa2d0086cd4fb3d3"
     end
   end
 
@@ -37,7 +37,8 @@ cask "clyde" do
     ]
 
   postflight do
-    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
+    cmd = system_command("/usr/bin/xattr", args: ["-h"], must_succeed: false, print_stdout: false, print_stderr: false) rescue nil
+    if cmd && cmd.exit_status == 0
       system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/clyde"]
     end
   end
