@@ -5,31 +5,31 @@
 class Clyde < Formula
   desc "Project calico observability tools"
   homepage "https://github.com/doucol/clyde"
-  url "https://github.com/doucol/clyde/archive/refs/tags/v0.4.18.tar.gz"
-  sha256 "8ad22e5be03be82f0edaaea92cac246343abe034d192ca862615942bedeb58ee"
+  url "https://github.com/doucol/clyde/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "5ee85c0de0a563cc640eae6d030074346166d9114e9fbe68623e7c4296ebe445"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.18/clyde-0.4.18-darwin-amd64.tar.gz"
-      sha256 "cd224cf7579176b39bbb7d59dcc860f4fac4a7100bb9e027ff2765e1bfa77fee"
+      url "https://github.com/doucol/clyde/releases/download/v0.5.0/clyde-0.5.0-darwin-amd64.tar.gz"
+      sha256 "6dfbe331a8a9fcaa496c373b872473a29e5408030c89d0409af6180b41a0ffda"
     end
 
     on_arm do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.18/clyde-0.4.18-darwin-arm64.tar.gz"
-      sha256 "94606050149b0b4f64f9d1ef7274976e6c5e40f3f25042509caf14018b1615bf"
+      url "https://github.com/doucol/clyde/releases/download/v0.5.0/clyde-0.5.0-darwin-arm64.tar.gz"
+      sha256 "a05d1a525ddbebf39dfa4e9f3b42a6691236faedb90d0f7456a32befde0b6d8f"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.18/clyde-0.4.18-linux-amd64.tar.gz"
-      sha256 "372a1befd4a06e9bf1e417231dc606d980aee67f1b982ddfd37cf463858afa48"
+      url "https://github.com/doucol/clyde/releases/download/v0.5.0/clyde-0.5.0-linux-amd64.tar.gz"
+      sha256 "863555218c128752a1a015f9fe7d54802c51243b95514f8f31cf6081d30fef9f"
     end
 
     on_arm do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.18/clyde-0.4.18-linux-arm64.tar.gz"
-      sha256 "f2eec7a94af9e776936b9d21a314aea6bdb02a156182b9e6678bae2f14251f22"
+      url "https://github.com/doucol/clyde/releases/download/v0.5.0/clyde-0.5.0-linux-arm64.tar.gz"
+      sha256 "ef0cdd5aa40e27a9e8ec7985e42ffe1d3cefeec6e47e3385d6ea98b5b108432a"
     end
   end
 
@@ -38,6 +38,6 @@ class Clyde < Formula
   end
 
   test do
-    assert_match("v0.4.18", shell_output("clyde version"))
+    assert_match("v0.5.0", shell_output("#{bin}/clyde version"))
   end
 end
