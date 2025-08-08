@@ -5,39 +5,39 @@
 class Clyde < Formula
   desc "Project calico observability tools"
   homepage "https://github.com/doucol/clyde"
-  url "https://github.com/doucol/clyde/archive/refs/tags/v0.4.17.tar.gz"
-  sha256 "076828423689b991df2f23d3b6c3f6cb413b39c0263c571068f0c7e7110c4e52"
+  url "https://github.com/doucol/clyde/archive/refs/tags/v0.4.18.tar.gz"
+  sha256 "8ad22e5be03be82f0edaaea92cac246343abe034d192ca862615942bedeb58ee"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.17/clyde-0.4.17-darwin-amd64.tar.gz"
-      sha256 "f5c0d197e6a2a7c25081dbeecaa6be271f2cc84643c1b4788738c538e93b3a88"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.18/clyde-0.4.18-darwin-amd64.tar.gz"
+      sha256 "cd224cf7579176b39bbb7d59dcc860f4fac4a7100bb9e027ff2765e1bfa77fee"
     end
 
     on_arm do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.17/clyde-0.4.17-darwin-arm64.tar.gz"
-      sha256 "3d83505aec12d9723b1a25dd84a49a0e180ccb86368f786a1b0289205df033b2"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.18/clyde-0.4.18-darwin-arm64.tar.gz"
+      sha256 "94606050149b0b4f64f9d1ef7274976e6c5e40f3f25042509caf14018b1615bf"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.17/clyde-0.4.17-linux-amd64.tar.gz"
-      sha256 "061fd38bae843efa5851e718a2a320149dabd73e689e7bab1eef992d0d76a526"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.18/clyde-0.4.18-linux-amd64.tar.gz"
+      sha256 "372a1befd4a06e9bf1e417231dc606d980aee67f1b982ddfd37cf463858afa48"
     end
 
     on_arm do
-      url "https://github.com/doucol/clyde/releases/download/v0.4.17/clyde-0.4.17-linux-arm64.tar.gz"
-      sha256 "28749d9f02011f1fdf2a4b20e38c8d2fcef57c8b264fcdf890676c0cc52857fb"
+      url "https://github.com/doucol/clyde/releases/download/v0.4.18/clyde-0.4.18-linux-arm64.tar.gz"
+      sha256 "f2eec7a94af9e776936b9d21a314aea6bdb02a156182b9e6678bae2f14251f22"
     end
   end
 
   def install
-    bin.install clyde
+    bin.install "clyde"
   end
 
   test do
-    assert_match("vv0.4.17", shell_output("clyde version"))
+    assert_match("v0.4.18", shell_output("clyde version"))
   end
 end
